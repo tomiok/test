@@ -16,8 +16,6 @@ public class Test {
     String dna[] = { "ATGCGA", "CATTGC", "TTATGT", "AGAATG", "CCCCTA", "TCACTG" };
     int dnaLength = dna.length;
 
-    int diagonalMaxIndex = getDiagIndex(dnaLength);
-
     char[][] matrix = new char[dnaLength][dnaLength];
 
     for (int i = 0; i < dna.length; i++) {
@@ -35,10 +33,6 @@ public class Test {
         .collect(Collectors.toList());
 
     diagonalSearchEngine(matrix, "AAAA".toCharArray());
-  }
-
-  private static int getDiagIndex(final int length) {
-    return length - (length % 4) - 2;
   }
 
   private static List<char[]> getColumns(final char[][] matrix) {
